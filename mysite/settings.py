@@ -29,7 +29,7 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 # Neo4j connection URL
-NEO4J_BOLT_URL = 'bolt://neo4j:marouane@localhost:7687'  # Update with your credentials
+NEO4J_BOLT_URL = os.getenv('NEO4J_BOLT_URL', 'bolt://neo4j:marouane@neo4j:7687')
 
 # Set up the connection
 config.DATABASE_URL = NEO4J_BOLT_URL
